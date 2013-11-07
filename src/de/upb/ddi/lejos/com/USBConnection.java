@@ -1,5 +1,5 @@
 
-package de.upb.ddi.lejos.comm;
+package de.upb.ddi.lejos.com;
 
 import de.upb.ddi.lejos.util.Console;
 import java.io.DataInputStream;

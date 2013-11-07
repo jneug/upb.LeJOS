@@ -1,5 +1,5 @@
 
-package de.upb.ddi.lejos.comm;
+package de.upb.ddi.lejos.com;
 
 /**
  * Schnittstelle für Verbindungen. Im Normalfall wird die
