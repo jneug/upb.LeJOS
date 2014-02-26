@@ -181,9 +181,9 @@ public class USBConnection implements RemoteConnection {
         }
     }
 
-    public void sendByte( byte value ) throws CommException {
+    public void sendByte( byte value ) throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         try {
@@ -191,13 +191,13 @@ public class USBConnection implements RemoteConnection {
             this.out.flush();
         } catch( IOException e ) {
             Console.err.println("usb: send failed");
-            throw new CommException("Failed to send byte", CommException.SEND);
+            throw new ComException("Failed to send byte", ComException.SEND);
         }
     }
 
-    public void sendInt( int value ) throws CommException {
+    public void sendInt( int value ) throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         try {
@@ -205,13 +205,13 @@ public class USBConnection implements RemoteConnection {
             this.out.flush();
         } catch( IOException e ) {
             Console.err.println("usb: send failed");
-            throw new CommException("Failed to send int", CommException.SEND);
+            throw new ComException("Failed to send int", ComException.SEND);
         }
     }
 
-    public void sendLong( long value ) throws CommException {
+    public void sendLong( long value ) throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         try {
@@ -219,13 +219,13 @@ public class USBConnection implements RemoteConnection {
             this.out.flush();
         } catch( IOException e ) {
             Console.err.println("usb: send failed");
-            throw new CommException("Failed to send long", CommException.SEND);
+            throw new ComException("Failed to send long", ComException.SEND);
         }
     }
 
-    public void sendString( String value ) throws CommException {
+    public void sendString( String value ) throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         try {
@@ -234,13 +234,13 @@ public class USBConnection implements RemoteConnection {
             this.out.flush();
         } catch( IOException e ) {
             Console.err.println("usb: send failed");
-            throw new CommException("Failed to send string", CommException.SEND);
+            throw new ComException("Failed to send string", ComException.SEND);
         }
     }
 
-    public byte receiveByte() throws CommException {
+    public byte receiveByte() throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         byte value = -1;
@@ -248,15 +248,15 @@ public class USBConnection implements RemoteConnection {
             value = this.in.readByte();
         } catch( IOException e ) {
             Console.err.println("usb: recv failed");
-            throw new CommException("Failed to receive byte", CommException.RECV);
+            throw new ComException("Failed to receive byte", ComException.RECV);
         }
 
         return value;
     }
 
-    public int receiveInt() throws CommException {
+    public int receiveInt() throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         int value = -1;
@@ -264,15 +264,15 @@ public class USBConnection implements RemoteConnection {
             value = this.in.readInt();
         } catch( IOException e ) {
             Console.err.println("usb: recv failed");
-            throw new CommException("Failed to receive int", CommException.RECV);
+            throw new ComException("Failed to receive int", ComException.RECV);
         }
 
         return value;
     }
 
-    public long receiveLong() throws CommException {
+    public long receiveLong() throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         long value = -1;
@@ -280,15 +280,15 @@ public class USBConnection implements RemoteConnection {
             value = this.in.readLong();
         } catch( IOException e ) {
             Console.err.println("usb: recv failed");
-            throw new CommException("Failed to receive long", CommException.RECV);
+            throw new ComException("Failed to receive long", ComException.RECV);
         }
 
         return value;
     }
 
-    public String receiveString() throws CommException {
+    public String receiveString() throws ComException {
         if( !this.isConnected() ) {
-            throw new CommException();
+            throw new ComException();
         }
 
         char[] str = new char[]{0};
@@ -301,7 +301,7 @@ public class USBConnection implements RemoteConnection {
             }
         } catch( IOException e ) {
             Console.err.println("usb: recv failed");
-            throw new CommException("Failed to receive string", CommException.RECV);
+            throw new ComException("Failed to receive string", ComException.RECV);
         }
 
         return new String(str);

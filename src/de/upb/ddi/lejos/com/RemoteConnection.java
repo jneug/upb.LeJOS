@@ -96,31 +96,31 @@ public interface RemoteConnection {
     /**
      * Empfangen eines Bytes.
      * @return Das nächste empfangene Byte
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public byte receiveByte() throws CommException;
+    public byte receiveByte() throws ComException;
 
     /**
      * Empfangen eines Integers.
      * @return Der nächste empfangene Integer
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public int receiveInt() throws CommException;
+    public int receiveInt() throws ComException;
 
     /**
      * Empfangen eines Long-Wertes.
      * @return Der nächste empfangenen Long
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public long receiveLong() throws CommException;
+    public long receiveLong() throws ComException;
 
     /**
      * Empfangen eines Strings der mit {@link sendString(String)} gesendet 
      * wurde.
      * @return Der nächste empfangene String
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public String receiveString() throws CommException;
+    public String receiveString() throws ComException;
 
     /**
      * Setzt den Zähler für Verbindungsversuche zurück.
@@ -130,29 +130,29 @@ public interface RemoteConnection {
     /**
      * Senden eines Bytes.
      * @param value
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public void sendByte( byte value ) throws CommException;
+    public void sendByte( byte value ) throws ComException;
 
     /**
      * Senden eines Integers.
      * @param value
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public void sendInt( int value ) throws CommException;
+    public void sendInt( int value ) throws ComException;
 
     /**
      * Senden eines Long-Wertes.
      * @param value
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public void sendLong( long value ) throws CommException;
+    public void sendLong( long value ) throws ComException;
 
     /**
      * Senden eines Strings.
      * @param value
-     * @throws CommException Falls ein Verbindungsfehler auftritt
+     * @throws ComException Falls ein Verbindungsfehler auftritt
      */
-    public void sendString( String value ) throws CommException;
+    public void sendString( String value ) throws ComException;
     
 }
