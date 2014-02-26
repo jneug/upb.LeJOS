@@ -5,7 +5,7 @@ package de.upb.ddi.lejos.com;
  *
  * @author Jonas Neugebauer <jneug@mail.upb.de>
  */
-public class CommException extends Exception {
+public class ComException extends Exception {
 
     public static final int CONN = 0, SEND = 1, RECV = 2, TIMEOUT = 3;
 
@@ -14,22 +14,22 @@ public class CommException extends Exception {
     /**
      * Creates a new instance of <code>CommException</code> without detail message.
      */
-    public CommException() {
+    public ComException() {
     }
 
     /**
      * Constructs an instance of <code>CommException</code> with the specified detail message.
      * @param msg the detail message.
      */
-    public CommException(String msg) {
+    public ComException(String msg) {
         super(msg);
     }
 
-    public CommException(int type) {
+    public ComException(int type) {
         this.type = type;
     }
 
-    public CommException(String msg, int type) {
+    public ComException(String msg, int type) {
         super(msg);
 
         this.type = type;
